@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white2">#DCCACA</color>
+    <color name="gray">#838080</color>
+    <color name="red">#FF5722</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="colorHeader">#FFFF99</color>
+    <color name="colorScore">#66FFCC</color>
+    <color name="backupColor1">#DDDDDD</color>
+    <color name="backupColor2">#66FFCC</color>
+    <color name="backupColor3">#99CCCC</color>
+    <color name="backupColor4">#E0A686</color>
+    <color name="resetButton">#F8B59A</color>
+    <color name="addHistoryButton">#4A00E609</color>
+    <color name="saveButton">#CCCCCC</color>
+    <color name="calculateButton">#B3BFFF</color>
+    <color name="winnerColor">#C9A6FF40</color>
+    <color name="hotPink">#DC5180</color>
+</resources>

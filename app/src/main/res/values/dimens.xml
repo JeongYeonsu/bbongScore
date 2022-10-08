@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="score_text_size">25sp</dimen>
+    <dimen name="name_text_size">30sp</dimen>
+    <dimen name="rank_text_size">19sp</dimen>
+    <dimen name="record_text_size">19sp</dimen>
+    <dimen name="today_money_size">16sp</dimen>
+    <dimen name="betting_text_size">10sp</dimen>
+    <dimen name="house_money_text_size">10sp</dimen>
+</resources>

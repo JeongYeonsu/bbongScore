@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ScoreList</string>
+    <string name="rank_text">Rank</string>
+    <string name="house_money_text">하우스 Money</string>
+</resources>

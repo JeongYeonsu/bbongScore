@@ -1,0 +1,1467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SecondTableActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/table_container"
+        android:scrollbars="vertical|horizontal"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical|horizontal"
+            android:id="@+id/horizontal_view">
+            <TableLayout
+                android:id="@+id/main_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/second_table_outside"
+                android:stretchColumns="*"
+                >
+
+                <!-- Save & Reset -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+                    <Button
+                        android:id="@+id/get_score_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="4"
+                        android:minLines="1"
+                        android:text="계산하기"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/calculateButton"
+                        android:layout_marginHorizontal="10dp"
+                        android:focusable="true"
+                        />
+                    <Button
+                        android:id="@+id/reset_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="리셋"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/resetButton"
+                        />
+                </TableRow>
+
+                <!--round View -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_title"
+                    >
+                    <TextView
+                        android:id="@+id/round_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="5"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/gray"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <!-- rank -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <EditText
+                        android:id="@+id/empty_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/rank_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rank_text"
+                        android:gravity="center"
+                        android:textSize="@dimen/rank_text_size"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/rank_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rank_text"
+                        android:gravity="center"
+                        android:textSize="@dimen/rank_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/rank_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rank_text"
+                        android:gravity="center"
+                        android:textSize="@dimen/rank_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/rank_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rank_text"
+                        android:gravity="center"
+                        android:textSize="@dimen/rank_text_size"
+                        />
+                </TableRow>
+
+                <!-- name -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_name_inside"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="7dp"
+                        android:textSize="34sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_name_inside"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:text="아빠"
+                        android:textSize="@dimen/name_text_size" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_name_inside"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:text="엄마"
+                        android:textSize="@dimen/name_text_size" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_name_inside"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:text="선미"
+                        android:textSize="@dimen/name_text_size" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_name_inside"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:text="연수"
+                        android:textSize="@dimen/name_text_size" />
+                </TableRow>
+
+                <!-- Total Score -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_total_score_inside">
+
+                    <Button
+                        android:id="@+id/minus_score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/resetButton"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <TextView
+                        android:id="@+id/player_score_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="34sp" />
+
+                    <TextView
+                        android:id="@+id/player_score_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="34sp" />
+
+                    <TextView
+                        android:id="@+id/player_score_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="34sp" />
+
+                    <TextView
+                        android:id="@+id/player_score_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="34sp" />
+                </TableRow>
+
+                <!-- 1round -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <!-- 2round -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <!-- 3round -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <!-- 4round -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val15"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <!-- 5round -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val16"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val17"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val19"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val21"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val22"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val23"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="7"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val25"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val26"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val27"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="8"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val28"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val29"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val30"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val31"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <EditText
+                        android:id="@+id/val32"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val33"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val34"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val35"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <!-- 10round -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <Button
+                        android:id="@+id/round_10"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/backupColor1"
+                        android:gravity="center"
+                        android:text="10"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/val36"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val37"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val38"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/val39"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_score_inside"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+                </TableRow>
+
+                <!-- Today Money -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_money_row">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_money_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:id="@+id/fTodayMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_money_row"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:textSize="@dimen/today_money_size" />
+
+                    <EditText
+                        android:id="@+id/mTodayMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_money_row"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:textSize="@dimen/today_money_size" />
+
+                    <EditText
+                        android:id="@+id/sTodayMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_money_row"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:textSize="@dimen/today_money_size" />
+
+                    <EditText
+                        android:id="@+id/yTodayMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_money_row"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:textSize="@dimen/today_money_size" />
+                </TableRow>
+
+                <!-- Betting -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_prize_row">
+
+                    <Button
+                        android:id="@+id/betting"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:text="M"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/prize1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_prize_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/betting_text_size" />
+
+                    <EditText
+                        android:id="@+id/prize2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_prize_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/betting_text_size" />
+
+                    <EditText
+                        android:id="@+id/prize3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_prize_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/betting_text_size" />
+
+                    <EditText
+                        android:id="@+id/prize4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_prize_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/betting_text_size" />
+                </TableRow>
+
+                <!-- save History -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+                    <TextView
+                        android:id="@+id/day_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="2"
+                        android:minLines="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray"
+                        />
+                    <Button
+                        android:id="@+id/add_history"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="⇩"
+                        android:includeFontPadding="false"
+                        android:backgroundTint="@color/saveButton"
+                        />
+                    <Button
+                        android:id="@+id/add_line_to_history_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="- - -"
+                        android:layout_marginRight="5dp"
+                        android:includeFontPadding="false"
+                        android:backgroundTint="@color/saveButton"
+                        />
+                </TableRow>
+
+                <!-- result -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_score_inside">
+
+                    <EditText
+                        android:id="@+id/history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="5"
+                        android:minLines="10"
+                        android:maxLines="15"
+                        android:textSize="15sp"
+                        android:scrollbars="vertical"
+                        android:scrollbarStyle="insideInset"
+                        android:overScrollMode="always"
+                        android:inputType="textMultiLine"
+                        />
+
+                </TableRow>
+
+                <!-- House Money -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_title">
+                    <EditText
+                        android:layout_span="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_title"
+                        android:gravity="center"
+                        android:text="@string/house_money_text"
+                        android:textSize="@dimen/house_money_text_size" />
+                    <EditText
+                        android:id="@+id/house_money"
+                        android:layout_span="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_title"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                    <EditText
+                        android:id="@+id/house_money_betting"
+                        android:layout_span="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_title"
+                        android:gravity="center"
+                        android:text="1000"
+                        android:inputType="number"
+                        android:textSize="@dimen/house_money_text_size" />
+                </TableRow>
+
+                <!-- 공란 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_title">
+                    <EditText
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_title"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="@dimen/record_text_size" />
+                </TableRow>
+
+                <!-- 전적 Record -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_title">
+
+                    <EditText
+                        android:layout_span="2"
+                        android:text="총"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_title"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:inputType="number"
+                        android:textSize="19sp" />
+
+                    <EditText
+                        android:id="@+id/total_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_title"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/score_text_size" />
+
+                    <EditText
+                        android:layout_span="1"
+                        android:text="게임"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_title"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:inputType="number"
+                        android:textSize="19sp" />
+
+                    <Button
+                        android:id="@+id/record_update_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="↻"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/resetButton"
+                        />
+
+                </TableRow>
+
+                <!-- Father Record -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="5"
+                        android:background="@drawable/second_table_record_father"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="아빠"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_father"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_1_player_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_father"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_2_player_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_father"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_3_player_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_father"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_4_player_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_father"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:id="@+id/win_rate_player_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="5"
+                        android:background="@drawable/second_table_record_father"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:id="@+id/top_rate_player_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="5"
+                        android:background="@drawable/second_table_record_table_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+
+                <!-- Mother Record -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="5"
+                        android:background="@drawable/second_table_record_mother"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="엄마"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_mother"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_1_player_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_mother"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_2_player_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_mother"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_3_player_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_mother"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_4_player_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_mother"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+                    <EditText
+                        android:id="@+id/win_rate_player_1"
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_mother"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+                    <EditText
+                        android:id="@+id/top_rate_player_1"
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_table_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+
+                <!-- Sun Record -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:layout_span="5"
+                        android:text="선미"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_sun"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_sun"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_1_player_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_sun"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_2_player_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_sun"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_3_player_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_sun"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_4_player_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_sun"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+                    <EditText
+                        android:id="@+id/win_rate_player_2"
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_sun"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+                    <EditText
+                        android:id="@+id/top_rate_player_2"
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_table_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+
+                <!-- YS Record -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:layout_span="5"
+                        android:text="연수"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_ys"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_ys"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_1_player_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_ys"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_2_player_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_ys"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_3_player_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_ys"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+
+                    <EditText
+                        android:id="@+id/rank_4_player_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_ys"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+                    <EditText
+                        android:id="@+id/win_rate_player_3"
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_ys"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_table_row">
+                    <EditText
+                        android:id="@+id/top_rate_player_3"
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_table_row"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="@dimen/record_text_size" />
+                </TableRow>
+
+                <!-- space -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_title">
+                    <TextView
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_title"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="50sp" />
+                </TableRow>
+
+                <!-- reset Record button -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/second_table_record_table_row">
+                    <Button
+                        android:id="@+id/record_reset_button"
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="데이터 초기화 하기"
+                        android:textSize="10sp" />
+                </TableRow>
+
+                <!-- space
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/second_table_record_title">
+                    <EditText
+                        android:layout_span="5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/second_table_record_title"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textSize="50sp" />
+                </TableRow>
+                -->
+            </TableLayout>
+         </HorizontalScrollView>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
